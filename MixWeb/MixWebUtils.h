@@ -7,6 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface MixWebBundle : NSObject
+
++ (NSBundle *)bundle;
+
+@end
+
 @interface MixWebColor : NSObject
 
 + (UIColor *)hex:(NSString *)hex;
@@ -19,7 +25,7 @@
 
 + (void)getImageWithURL:(NSString *)url completion:(void (^)(UIImage *image, NSString *url))completion;
 
-+ (UIImage *)imageName:(NSString *)imageName bundleName:(NSString *)bundleName;
++ (UIImage *)imageName:(NSString *)imageName;
 
 @end
 

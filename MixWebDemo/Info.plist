@@ -27,6 +27,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>需要您的同意才能访问相机</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>授权保存图片在您的相册里</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要您的同意才能读取媒体资料库</string>
 	<key>UILaunchStoryboardName</key>

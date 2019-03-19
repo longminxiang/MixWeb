@@ -10,6 +10,7 @@
 #import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 #import <JavaScriptCore/JSContext.h>
 #import <JavaScriptCore/JSValue.h>
+#import "MixWebUtils.h"
 
 NSMutableSet* _mixWebViewModuleClasses(void) {
     static id obj;
@@ -89,7 +90,7 @@ NSSet* mixWebViewModuleClasses(void) {
     static id obj;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSBundle *bundle = [NSBundle mainBundle];
+        NSBundle *bundle = [MixWebBundle bundle];
         NSString *path = [bundle pathForResource:@"app" ofType:@"js"];
         NSString *script = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         

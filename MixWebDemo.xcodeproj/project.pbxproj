@@ -7,62 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0700AF1F221F90AC00C6D281 /* MWVCPreloadImageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF1E221F90AC00C6D281 /* MWVCPreloadImageModule.m */; };
-		0700AF23221F978700C6D281 /* MWVCFailedViewModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF22221F978700C6D281 /* MWVCFailedViewModule.m */; };
-		0700AF27221F9D1000C6D281 /* MWVCNavBarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF26221F9D1000C6D281 /* MWVCNavBarModule.m */; };
-		0700AF2E221FA06400C6D281 /* MWVCStatusBarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF2D221FA06400C6D281 /* MWVCStatusBarModule.m */; };
-		0700AF32221FD4B200C6D281 /* MWVCTitleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF31221FD4B200C6D281 /* MWVCTitleModule.m */; };
-		0700AF36221FD95200C6D281 /* MWVCNavButtonModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF35221FD95200C6D281 /* MWVCNavButtonModule.m */; };
-		0700AF3A221FFC6400C6D281 /* MWVCGlobalModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700AF39221FFC6400C6D281 /* MWVCGlobalModule.m */; };
-		073B0BEA223E1FFD00777C51 /* xapp.js in Resources */ = {isa = PBXBuildFile; fileRef = 073B0BE8223E1FFD00777C51 /* xapp.js */; };
-		073B0BEB223E1FFD00777C51 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 073B0BE9223E1FFD00777C51 /* app.js */; };
-		0748CB18221EA3840028D5ED /* MWVCProgressModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0748CB15221EA3830028D5ED /* MWVCProgressModule.m */; };
 		074A93E21F7B5337002A6674 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A93E11F7B5337002A6674 /* main.m */; };
 		074A93E51F7B5337002A6674 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A93E41F7B5337002A6674 /* AppDelegate.m */; };
 		074A93E81F7B5337002A6674 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A93E71F7B5337002A6674 /* ViewController.m */; };
 		074A93ED1F7B5337002A6674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074A93EC1F7B5337002A6674 /* Assets.xcassets */; };
 		074A93F01F7B5337002A6674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074A93EE1F7B5337002A6674 /* LaunchScreen.storyboard */; };
-		0793BFFA2226338800D55995 /* MixWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0793BFF62226338800D55995 /* MixWebView.m */; };
-		0793BFFB2226338800D55995 /* MixWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0793BFF82226338800D55995 /* MixWebVC.m */; };
 		0793BFFE22266C6700D55995 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0793BFFD22266C6700D55995 /* WebVC.m */; };
-		07B02606223F92A2007D7FAA /* MWVNotificationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B02605223F92A2007D7FAA /* MWVNotificationModule.m */; };
-		07DCF051223B844600169537 /* MWVTimerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF031223B844600169537 /* MWVTimerModule.m */; };
-		07DCF052223B844600169537 /* MXPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF035223B844600169537 /* MXPhotoViewer.m */; };
-		07DCF053223B844600169537 /* MWVImageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF038223B844600169537 /* MWVImageModule.m */; };
-		07DCF054223B844600169537 /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DCF039223B844600169537 /* save@2x.png */; };
-		07DCF055223B844600169537 /* save@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DCF03A223B844600169537 /* save@3x.png */; };
-		07DCF056223B844600169537 /* MXPhotoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF03B223B844600169537 /* MXPhotoDetailView.m */; };
-		07DCF057223B844600169537 /* MWVStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF03D223B844600169537 /* MWVStorageModule.m */; };
-		07DCF058223B844600169537 /* MWVPopoverModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF040223B844600169537 /* MWVPopoverModule.m */; };
-		07DCF05A223B844600169537 /* MWVSystemModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF046223B844600169537 /* MWVSystemModule.m */; };
-		07DCF05B223B844600169537 /* MWVViewControllerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF049223B844600169537 /* MWVViewControllerModule.m */; };
-		07DCF05C223B844600169537 /* MWVInteractiveModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF04B223B844600169537 /* MWVInteractiveModule.m */; };
-		07DCF05D223B844600169537 /* MWVRequestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DCF04F223B844600169537 /* MWVRequestModule.m */; };
-		07EF52CA21702F8E001414E1 /* MixWebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF52AB21702F8E001414E1 /* MixWebUtils.m */; };
-		07F6A977223BFFD1002E4D76 /* MixWebValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F6A976223BFFD1002E4D76 /* MixWebValue.m */; };
 		07FE89961F8E133000D3DF1C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07FE89951F8E133000D3DF1C /* ViewController.xib */; };
-		FDA2DD152F768467464C099C /* Pods_MixWebDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7258CECDECF4AAB29B10F4E /* Pods_MixWebDemo.framework */; };
+		A8E8D3186AA092C2C80F7882 /* Pods_MixWebDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2B5B7A903341CC9DBB36B2 /* Pods_MixWebDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0700AF1D221F90AC00C6D281 /* MWVCPreloadImageModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCPreloadImageModule.h; sourceTree = "<group>"; };
-		0700AF1E221F90AC00C6D281 /* MWVCPreloadImageModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCPreloadImageModule.m; sourceTree = "<group>"; };
-		0700AF21221F978700C6D281 /* MWVCFailedViewModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCFailedViewModule.h; sourceTree = "<group>"; };
-		0700AF22221F978700C6D281 /* MWVCFailedViewModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCFailedViewModule.m; sourceTree = "<group>"; };
-		0700AF25221F9D1000C6D281 /* MWVCNavBarModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCNavBarModule.h; sourceTree = "<group>"; };
-		0700AF26221F9D1000C6D281 /* MWVCNavBarModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCNavBarModule.m; sourceTree = "<group>"; };
-		0700AF2C221FA06400C6D281 /* MWVCStatusBarModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCStatusBarModule.h; sourceTree = "<group>"; };
-		0700AF2D221FA06400C6D281 /* MWVCStatusBarModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCStatusBarModule.m; sourceTree = "<group>"; };
-		0700AF30221FD4B200C6D281 /* MWVCTitleModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCTitleModule.h; sourceTree = "<group>"; };
-		0700AF31221FD4B200C6D281 /* MWVCTitleModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCTitleModule.m; sourceTree = "<group>"; };
-		0700AF34221FD95200C6D281 /* MWVCNavButtonModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCNavButtonModule.h; sourceTree = "<group>"; };
-		0700AF35221FD95200C6D281 /* MWVCNavButtonModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCNavButtonModule.m; sourceTree = "<group>"; };
-		0700AF38221FFC6400C6D281 /* MWVCGlobalModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWVCGlobalModule.h; sourceTree = "<group>"; };
-		0700AF39221FFC6400C6D281 /* MWVCGlobalModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWVCGlobalModule.m; sourceTree = "<group>"; };
-		073B0BE8223E1FFD00777C51 /* xapp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = xapp.js; sourceTree = "<group>"; };
-		073B0BE9223E1FFD00777C51 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
-		0748CB12221EA3830028D5ED /* MWVCProgressModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVCProgressModule.h; sourceTree = "<group>"; };
-		0748CB15221EA3830028D5ED /* MWVCProgressModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVCProgressModule.m; sourceTree = "<group>"; };
 		074A93DD1F7B5337002A6674 /* MixWebDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixWebDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		074A93E11F7B5337002A6674 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		074A93E31F7B5337002A6674 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,46 +27,12 @@
 		074A93EC1F7B5337002A6674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		074A93EF1F7B5337002A6674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		074A93F11F7B5337002A6674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07640C6C2240F5FB001D2327 /* MixWeb.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MixWeb.podspec; sourceTree = "<group>"; };
-		0793BFF62226338800D55995 /* MixWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixWebView.m; sourceTree = "<group>"; };
-		0793BFF72226338800D55995 /* MixWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixWebVC.h; sourceTree = "<group>"; };
-		0793BFF82226338800D55995 /* MixWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixWebVC.m; sourceTree = "<group>"; };
-		0793BFF92226338800D55995 /* MixWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixWebView.h; sourceTree = "<group>"; };
 		0793BFFC22266C6700D55995 /* WebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
 		0793BFFD22266C6700D55995 /* WebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
-		07B02604223F92A2007D7FAA /* MWVNotificationModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVNotificationModule.h; sourceTree = "<group>"; };
-		07B02605223F92A2007D7FAA /* MWVNotificationModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVNotificationModule.m; sourceTree = "<group>"; };
-		07DCF031223B844600169537 /* MWVTimerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVTimerModule.m; sourceTree = "<group>"; };
-		07DCF032223B844600169537 /* MWVTimerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVTimerModule.h; sourceTree = "<group>"; };
-		07DCF034223B844600169537 /* MWVImageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVImageModule.h; sourceTree = "<group>"; };
-		07DCF035223B844600169537 /* MXPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPhotoViewer.m; sourceTree = "<group>"; };
-		07DCF036223B844600169537 /* MXPhotoDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPhotoDetailView.h; sourceTree = "<group>"; };
-		07DCF037223B844600169537 /* MXPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPhotoViewer.h; sourceTree = "<group>"; };
-		07DCF038223B844600169537 /* MWVImageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVImageModule.m; sourceTree = "<group>"; };
-		07DCF039223B844600169537 /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
-		07DCF03A223B844600169537 /* save@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@3x.png"; sourceTree = "<group>"; };
-		07DCF03B223B844600169537 /* MXPhotoDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPhotoDetailView.m; sourceTree = "<group>"; };
-		07DCF03D223B844600169537 /* MWVStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVStorageModule.m; sourceTree = "<group>"; };
-		07DCF03E223B844600169537 /* MWVStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVStorageModule.h; sourceTree = "<group>"; };
-		07DCF040223B844600169537 /* MWVPopoverModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVPopoverModule.m; sourceTree = "<group>"; };
-		07DCF041223B844600169537 /* MWVPopoverModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVPopoverModule.h; sourceTree = "<group>"; };
-		07DCF044223B844600169537 /* MWVSystemModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVSystemModule.h; sourceTree = "<group>"; };
-		07DCF046223B844600169537 /* MWVSystemModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVSystemModule.m; sourceTree = "<group>"; };
-		07DCF048223B844600169537 /* MWVViewControllerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVViewControllerModule.h; sourceTree = "<group>"; };
-		07DCF049223B844600169537 /* MWVViewControllerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVViewControllerModule.m; sourceTree = "<group>"; };
-		07DCF04B223B844600169537 /* MWVInteractiveModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVInteractiveModule.m; sourceTree = "<group>"; };
-		07DCF04C223B844600169537 /* MWVInteractiveModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVInteractiveModule.h; sourceTree = "<group>"; };
-		07DCF04E223B844600169537 /* MWVRequestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVRequestModule.h; sourceTree = "<group>"; };
-		07DCF04F223B844600169537 /* MWVRequestModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVRequestModule.m; sourceTree = "<group>"; };
-		07DCF060223B893200169537 /* MixWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixWeb.h; sourceTree = "<group>"; };
-		07EF52AA21702F8E001414E1 /* MixWebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixWebUtils.h; sourceTree = "<group>"; };
-		07EF52AB21702F8E001414E1 /* MixWebUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixWebUtils.m; sourceTree = "<group>"; };
-		07F6A975223BFFD1002E4D76 /* MixWebValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixWebValue.h; sourceTree = "<group>"; };
-		07F6A976223BFFD1002E4D76 /* MixWebValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixWebValue.m; sourceTree = "<group>"; };
 		07FE89951F8E133000D3DF1C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		0D2B5B7A903341CC9DBB36B2 /* Pods_MixWebDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixWebDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3496110668BCC36E8F2E2638 /* Pods-MixWebDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixWebDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		39F8F9794DEEB41ABEB4E321 /* Pods-MixWebDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixWebDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D7258CECDECF4AAB29B10F4E /* Pods_MixWebDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixWebDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,53 +40,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA2DD152F768467464C099C /* Pods_MixWebDemo.framework in Frameworks */,
+				A8E8D3186AA092C2C80F7882 /* Pods_MixWebDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		073B0BE7223E1FFD00777C51 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				07DCF039223B844600169537 /* save@2x.png */,
-				07DCF03A223B844600169537 /* save@3x.png */,
-				073B0BE8223E1FFD00777C51 /* xapp.js */,
-				073B0BE9223E1FFD00777C51 /* app.js */,
-			);
-			name = Resources;
-			path = MixWeb/Resources;
-			sourceTree = SOURCE_ROOT;
-		};
-		0748CB0E221EA3830028D5ED /* ViewControllerModules */ = {
-			isa = PBXGroup;
-			children = (
-				0700AF38221FFC6400C6D281 /* MWVCGlobalModule.h */,
-				0700AF39221FFC6400C6D281 /* MWVCGlobalModule.m */,
-				0700AF34221FD95200C6D281 /* MWVCNavButtonModule.h */,
-				0700AF35221FD95200C6D281 /* MWVCNavButtonModule.m */,
-				0700AF30221FD4B200C6D281 /* MWVCTitleModule.h */,
-				0700AF31221FD4B200C6D281 /* MWVCTitleModule.m */,
-				0700AF2C221FA06400C6D281 /* MWVCStatusBarModule.h */,
-				0700AF2D221FA06400C6D281 /* MWVCStatusBarModule.m */,
-				0700AF25221F9D1000C6D281 /* MWVCNavBarModule.h */,
-				0700AF26221F9D1000C6D281 /* MWVCNavBarModule.m */,
-				0700AF21221F978700C6D281 /* MWVCFailedViewModule.h */,
-				0700AF22221F978700C6D281 /* MWVCFailedViewModule.m */,
-				0700AF1D221F90AC00C6D281 /* MWVCPreloadImageModule.h */,
-				0700AF1E221F90AC00C6D281 /* MWVCPreloadImageModule.m */,
-				0748CB12221EA3830028D5ED /* MWVCProgressModule.h */,
-				0748CB15221EA3830028D5ED /* MWVCProgressModule.m */,
-			);
-			path = ViewControllerModules;
-			sourceTree = "<group>";
-		};
 		074A93D41F7B5337002A6674 = {
 			isa = PBXGroup;
 			children = (
-				07640C6C2240F5FB001D2327 /* MixWeb.podspec */,
-				07EF528421702F8E001414E1 /* MixWeb */,
 				074A93DF1F7B5337002A6674 /* MixWebDemo */,
 				074A93DE1F7B5337002A6674 /* Products */,
 				2C210CDC50C8FC35B1D3B1E3 /* Pods */,
@@ -207,62 +91,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07DCF02C223B844600169537 /* WebViewModules */ = {
-			isa = PBXGroup;
-			children = (
-				07B02604223F92A2007D7FAA /* MWVNotificationModule.h */,
-				07B02605223F92A2007D7FAA /* MWVNotificationModule.m */,
-				07DCF032223B844600169537 /* MWVTimerModule.h */,
-				07DCF031223B844600169537 /* MWVTimerModule.m */,
-				07DCF03E223B844600169537 /* MWVStorageModule.h */,
-				07DCF03D223B844600169537 /* MWVStorageModule.m */,
-				07DCF041223B844600169537 /* MWVPopoverModule.h */,
-				07DCF040223B844600169537 /* MWVPopoverModule.m */,
-				07DCF044223B844600169537 /* MWVSystemModule.h */,
-				07DCF046223B844600169537 /* MWVSystemModule.m */,
-				07DCF04C223B844600169537 /* MWVInteractiveModule.h */,
-				07DCF04B223B844600169537 /* MWVInteractiveModule.m */,
-				07DCF04E223B844600169537 /* MWVRequestModule.h */,
-				07DCF04F223B844600169537 /* MWVRequestModule.m */,
-				07DCF048223B844600169537 /* MWVViewControllerModule.h */,
-				07DCF049223B844600169537 /* MWVViewControllerModule.m */,
-			);
-			path = WebViewModules;
-			sourceTree = "<group>";
-		};
-		07DCF033223B844600169537 /* MWVImageModule */ = {
-			isa = PBXGroup;
-			children = (
-				07DCF034223B844600169537 /* MWVImageModule.h */,
-				07DCF038223B844600169537 /* MWVImageModule.m */,
-				07DCF036223B844600169537 /* MXPhotoDetailView.h */,
-				07DCF03B223B844600169537 /* MXPhotoDetailView.m */,
-				07DCF037223B844600169537 /* MXPhotoViewer.h */,
-				07DCF035223B844600169537 /* MXPhotoViewer.m */,
-			);
-			path = MWVImageModule;
-			sourceTree = "<group>";
-		};
-		07EF528421702F8E001414E1 /* MixWeb */ = {
-			isa = PBXGroup;
-			children = (
-				07DCF060223B893200169537 /* MixWeb.h */,
-				0793BFF72226338800D55995 /* MixWebVC.h */,
-				0793BFF82226338800D55995 /* MixWebVC.m */,
-				0793BFF92226338800D55995 /* MixWebView.h */,
-				0793BFF62226338800D55995 /* MixWebView.m */,
-				07F6A975223BFFD1002E4D76 /* MixWebValue.h */,
-				07F6A976223BFFD1002E4D76 /* MixWebValue.m */,
-				07EF52AA21702F8E001414E1 /* MixWebUtils.h */,
-				07EF52AB21702F8E001414E1 /* MixWebUtils.m */,
-				07DCF033223B844600169537 /* MWVImageModule */,
-				07DCF02C223B844600169537 /* WebViewModules */,
-				0748CB0E221EA3830028D5ED /* ViewControllerModules */,
-				073B0BE7223E1FFD00777C51 /* Resources */,
-			);
-			path = MixWeb;
-			sourceTree = "<group>";
-		};
 		2C210CDC50C8FC35B1D3B1E3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +103,7 @@
 		6F148DC91124456E7CDF237D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7258CECDECF4AAB29B10F4E /* Pods_MixWebDemo.framework */,
+				0D2B5B7A903341CC9DBB36B2 /* Pods_MixWebDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,7 +119,7 @@
 				074A93D91F7B5337002A6674 /* Sources */,
 				074A93DA1F7B5337002A6674 /* Frameworks */,
 				074A93DB1F7B5337002A6674 /* Resources */,
-				C23A51F872CE9EF03E809B78 /* [CP] Embed Pods Frameworks */,
+				6BADDBF99DBF02D3A4B2E434 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,10 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				074A93F01F7B5337002A6674 /* LaunchScreen.storyboard in Resources */,
-				07DCF054223B844600169537 /* save@2x.png in Resources */,
-				073B0BEA223E1FFD00777C51 /* xapp.js in Resources */,
-				07DCF055223B844600169537 /* save@3x.png in Resources */,
-				073B0BEB223E1FFD00777C51 /* app.js in Resources */,
 				074A93ED1F7B5337002A6674 /* Assets.xcassets in Resources */,
 				07FE89961F8E133000D3DF1C /* ViewController.xib in Resources */,
 			);
@@ -353,6 +177,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6BADDBF99DBF02D3A4B2E434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MixCache_Objc/MixCache_Objc.framework",
+				"${BUILT_PRODUCTS_DIR}/MixDevice/MixDevice.framework",
+				"${BUILT_PRODUCTS_DIR}/MixExtention/MixExtention.framework",
+				"${BUILT_PRODUCTS_DIR}/MixWeb/MixWeb.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixCache_Objc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixDevice.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixExtention.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixWeb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A503026B6E61C6C05955FCDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,36 +227,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C23A51F872CE9EF03E809B78 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MixCache_Objc/MixCache_Objc.framework",
-				"${BUILT_PRODUCTS_DIR}/MixDevice/MixDevice.framework",
-				"${BUILT_PRODUCTS_DIR}/MixExtention/MixExtention.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
-				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixCache_Objc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixDevice.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MixExtention.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,32 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0793BFFE22266C6700D55995 /* WebVC.m in Sources */,
-				07DCF057223B844600169537 /* MWVStorageModule.m in Sources */,
-				07DCF053223B844600169537 /* MWVImageModule.m in Sources */,
-				0700AF36221FD95200C6D281 /* MWVCNavButtonModule.m in Sources */,
-				07B02606223F92A2007D7FAA /* MWVNotificationModule.m in Sources */,
-				07EF52CA21702F8E001414E1 /* MixWebUtils.m in Sources */,
-				07DCF058223B844600169537 /* MWVPopoverModule.m in Sources */,
 				074A93E81F7B5337002A6674 /* ViewController.m in Sources */,
 				074A93E51F7B5337002A6674 /* AppDelegate.m in Sources */,
 				074A93E21F7B5337002A6674 /* main.m in Sources */,
-				0700AF3A221FFC6400C6D281 /* MWVCGlobalModule.m in Sources */,
-				0700AF32221FD4B200C6D281 /* MWVCTitleModule.m in Sources */,
-				0700AF2E221FA06400C6D281 /* MWVCStatusBarModule.m in Sources */,
-				07DCF05C223B844600169537 /* MWVInteractiveModule.m in Sources */,
-				0748CB18221EA3840028D5ED /* MWVCProgressModule.m in Sources */,
-				0700AF23221F978700C6D281 /* MWVCFailedViewModule.m in Sources */,
-				0700AF1F221F90AC00C6D281 /* MWVCPreloadImageModule.m in Sources */,
-				0700AF27221F9D1000C6D281 /* MWVCNavBarModule.m in Sources */,
-				07DCF056223B844600169537 /* MXPhotoDetailView.m in Sources */,
-				0793BFFA2226338800D55995 /* MixWebView.m in Sources */,
-				07F6A977223BFFD1002E4D76 /* MixWebValue.m in Sources */,
-				0793BFFB2226338800D55995 /* MixWebVC.m in Sources */,
-				07DCF051223B844600169537 /* MWVTimerModule.m in Sources */,
-				07DCF05D223B844600169537 /* MWVRequestModule.m in Sources */,
-				07DCF05B223B844600169537 /* MWVViewControllerModule.m in Sources */,
-				07DCF05A223B844600169537 /* MWVSystemModule.m in Sources */,
-				07DCF052223B844600169537 /* MXPhotoViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

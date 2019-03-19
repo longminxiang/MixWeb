@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'MixWeb'
-    s.version = '0.9.0'
+    s.version = '0.1.0'
     s.summary = 'UIWebView for micro program'
     s.authors = { 'Eric Long' => 'longminxiang@163.com' }
     s.license = 'MIT'
@@ -9,11 +9,12 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     s.ios.deployment_target = '8.0'
 
-    s.default_subspec = 'Core'
+    s.default_subspec = 'Core', 'Image'
 
     s.subspec 'Core' do |c|
         c.source_files = 'MixWeb/**/*.{h,m}'
         c.exclude_files = 'MixWeb/MWVImageModule/*.{h,m}'
+        c.resource_bundles = {'MixWeb' => 'MixWeb/**/*.{js,png}'}
         c.dependency 'MixExtention', '~> 1.0'
         c.dependency 'SDWebImage/Core', '~> 4.4.0'
         c.dependency 'WebViewJavascriptBridge', '~> 6.0.3'
@@ -24,8 +25,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Image' do |c|
         c.source_files = 'MixWeb/MWVImageModule/**/*.{h,m}'
-        c.resource_bundles = {'TTAD' => 'Apps/AD/View/*.{xib,png}'}
+        c.dependency 'MixWeb/Core'
         c.dependency 'TZImagePickerController', '~> 3.2.0'
     end
-
 end

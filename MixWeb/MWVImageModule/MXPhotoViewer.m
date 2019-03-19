@@ -64,7 +64,9 @@
     self.navigationItem.title = [NSString stringWithFormat:@"%ld/%ld", (long)self.currentPage + 1, (long)self.kNumberOfPages];
     
     UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-    UIImage *image = [MixWebImage imageName:@"save" bundleName:@"MixWeb"];
+    
+    UIImage *image = [MixWebImage imageName:@"save"];
+    
     [rightButton setImage:image forState:UIControlStateNormal];
     rightButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     [rightButton addTarget:self action:@selector(rightBarButtonItemTouched) forControlEvents:UIControlEventTouchUpInside];

@@ -61,7 +61,7 @@
     return [NSString stringWithFormat:@"%@", self.obj];
 }
 
-- (NSArray *)arr
+- (NSArray *)array
 {
     return [self.obj isKindOfClass:[NSArray class]] ? self.obj : nil;
 }

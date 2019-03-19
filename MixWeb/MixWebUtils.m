@@ -9,6 +9,18 @@
 #import <SDWebImage/SDWebImageManager.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 
+@implementation MixWebBundle
+
++ (NSBundle *)bundle
+{
+    NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.MixWeb"];
+    NSString *bundlePath = [frameworkBundle pathForResource:@"MixWeb" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    return bundle ? bundle : [NSBundle mainBundle];
+}
+
+@end
+
 @implementation MixWebColor
 
 + (UIColor *)hex:(NSString *)hex
@@ -100,15 +112,9 @@
     }];
 }
 
-+ (UIImage *)imageName:(NSString *)imageName bundleName:(NSString *)bundleName
++ (UIImage *)imageName:(NSString *)imageName
 {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:bundleName];
-    if (bundle) {
-        return [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
-    }
-    else {
-        return [UIImage imageNamed:imageName];
-    }
+    return [UIImage imageNamed:imageName inBundle:[MixWebBundle bundle] compatibleWithTraitCollection:nil];
 }
 
 @end
