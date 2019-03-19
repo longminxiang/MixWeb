@@ -75,8 +75,7 @@
                            @"bounces": @(YES),
                            @"progress": @{@"enable": @(YES)},
                            };
-//    WebVC *vc = [[WebVC alloc] initWithURLString:@"http://localhost:8334/ffl/answer/index.html"];
-    WebVC *vc = [[WebVC alloc] initWithURLString:@"http://hao123.com"];
+    WebVC *vc = [[WebVC alloc] initWithURLString:@"http://baidu.com"];
     [vc mergeConfig:dict];
     [self.navigationController pushViewController:vc animated:YES];
 }

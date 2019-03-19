@@ -70,19 +70,30 @@ NSSet* mixWebViewModuleClasses(void) {
         [modules addObject:obj];
     }
     _modules = modules;
-    
-    __weak typeof(self) weaks = self;
-    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-        JSContext *ctx = [weaks valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-        if (![[ctx.globalObject valueForProperty:@"__didsetcustomscript"] toBool]) {
-            [ctx evaluateScript:[weaks defaultInitialJavaScript]];
-            NSString *script = [weaks modulesInitialJavaScript];
-            [ctx evaluateScript:script];
-            [ctx.globalObject setValue:@(YES) forProperty:@"__didsetcustomscript"];
-        }
+}
+
++ (NSMutableArray<NSString *> *)whiteList
+{
+    static id obj;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        obj = [NSMutableArray new];
     });
-    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
-    self.runLoopObserver = observer;
+    return obj;
+}
+
++ (void)setWhiteList:(NSArray<NSString *> *)whiteList
+{
+    [[self whiteList] removeAllObjects];
+    [[self whiteList] addObjectsFromArray:whiteList];
+}
+
++ (BOOL)containsHost:(NSString *)host
+{
+    for (NSString *ahost in [MixWebView whiteList]) {
+        if ([ahost isEqualToString:host] || [ahost isEqualToString:@"*"]) return YES;
+    }
+    return NO;
 }
 
 - (NSString *)defaultInitialJavaScript
@@ -113,10 +124,33 @@ NSSet* mixWebViewModuleClasses(void) {
     return javaScript;
 }
 
+- (void)startContextRunLoop
+{
+    if (self.runLoopObserver) return;
+    
+    __weak typeof(self) weaks = self;
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        JSContext *ctx = [weaks valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+        if (![[ctx.globalObject valueForProperty:@"__didsetcustomscript"] toBool]) {
+            NSString *host = weaks.request.URL.host;
+            if (!host) host = weaks.originRequest.URL.host;
+            if ([MixWebView containsHost:host]) {
+                [ctx evaluateScript:[weaks defaultInitialJavaScript]];
+                NSString *script = [weaks modulesInitialJavaScript];
+                [ctx evaluateScript:script];
+            }
+            [ctx.globalObject setValue:@(YES) forProperty:@"__didsetcustomscript"];
+        }
+    });
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
+    self.runLoopObserver = observer;
+}
+
 - (void)loadRequest:(NSURLRequest *)request
 {
     [super loadRequest:request];
     _originRequest = request;
+    [self startContextRunLoop];
 }
 
 - (void)reloadOriginRequest

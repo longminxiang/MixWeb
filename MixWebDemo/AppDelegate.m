@@ -22,6 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
 
+    [MixWebView setWhiteList:@[@"163.com", @"3g.163.com", @"localhost"]];
+    
     UITabBarController *barVC = [UITabBarController new];
     barVC.tabBar.tintColor = [UIColor orangeColor];
     barVC.automaticallyAdjustsScrollViewInsets = NO;

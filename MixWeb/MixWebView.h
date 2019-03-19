@@ -52,6 +52,8 @@ NSSet* mixWebViewModuleClasses(void);
 
 @property (nonatomic, readonly) NSURLRequest *originRequest;
 
++ (void)setWhiteList:(NSArray<NSString *> *)whiteList;
+
 - (void)reloadOriginRequest;
 
 - (void)registerBridgeHandler:(NSString *)name handler:(MixWebJSHandler)handler;
