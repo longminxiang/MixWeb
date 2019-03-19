@@ -68,7 +68,7 @@ $app.hideHUD = function() {
  * @param {string} opts.confirmTitle - 确认按钮标题
  * @param {alertCallback} cb - 回调函数
  * @callback alertCallback
- * @param {number} buttonIndex - 点击index
+ * @param {number} index - 点击index
  */
 $app.alert = function(opts, cb) {
     $b("showAlert").p(opts).c(cb);
@@ -84,8 +84,8 @@ $app.alert = function(opts, cb) {
  * @callback actionSheetCallback
  * @param {number} buttonIndex - 点击index
  */
-$app.actionSheet = function(opts) {
-    $b("showActionSheet").p(opts).c();
+$app.actionSheet = function(opts, cb) {
+    $b("showActionSheet").p(opts).c(cb);
 };
 
 /**
