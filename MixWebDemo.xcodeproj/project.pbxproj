@@ -72,6 +72,7 @@
 		074A93EC1F7B5337002A6674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		074A93EF1F7B5337002A6674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		074A93F11F7B5337002A6674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07640C6C2240F5FB001D2327 /* MixWeb.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MixWeb.podspec; sourceTree = "<group>"; };
 		0793BFF62226338800D55995 /* MixWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixWebView.m; sourceTree = "<group>"; };
 		0793BFF72226338800D55995 /* MixWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixWebVC.h; sourceTree = "<group>"; };
 		0793BFF82226338800D55995 /* MixWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixWebVC.m; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		074A93D41F7B5337002A6674 = {
 			isa = PBXGroup;
 			children = (
+				07640C6C2240F5FB001D2327 /* MixWeb.podspec */,
 				07EF528421702F8E001414E1 /* MixWeb */,
 				074A93DF1F7B5337002A6674 /* MixWebDemo */,
 				074A93DE1F7B5337002A6674 /* Products */,
