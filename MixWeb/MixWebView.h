@@ -9,7 +9,6 @@
 #import "MixWebValue.h"
 
 @class MixWebView;
-@class MixWebValue;
 
 typedef void (^MixWebJSResponseCallback)(NSDictionary *response);
 

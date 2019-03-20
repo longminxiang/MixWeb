@@ -6,7 +6,6 @@
 //  Copyright © 2019 Eric. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "MixWebVC.h"
 
 @interface MWVCNavButtonModule : NSObject<MixWebViewControllerModule>

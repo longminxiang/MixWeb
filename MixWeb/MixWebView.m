@@ -6,7 +6,6 @@
 //
 
 #import "MixWebView.h"
-#import <objc/runtime.h>
 #import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 #import <JavaScriptCore/JSContext.h>
 #import <JavaScriptCore/JSValue.h>

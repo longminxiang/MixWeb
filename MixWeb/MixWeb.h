@@ -12,5 +12,6 @@
 #import "MixWebValue.h"
 #import "MixWebView.h"
 #import "MixWebVC.h"
+#import "MixWebUtils.h"
 
 #endif /* MixWeb_h */

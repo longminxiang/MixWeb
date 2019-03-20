@@ -6,9 +6,6 @@
 //
 
 #import "MixWebVC.h"
-#import <objc/runtime.h>
-#import "MixWebVC.h"
-#import "MixWeb.h"
 
 NSMutableSet* _mixWebViewControllerModuleClasses(void) {
     static id obj;
