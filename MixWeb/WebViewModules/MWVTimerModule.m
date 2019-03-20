@@ -25,27 +25,28 @@ MIX_WEBVIEW_MODULE_INIT
     __weak typeof(self) weaks = self;
     [self.webView registerBridgeHandler:@"startTimer" handler:^(MixWebValue *value, MixWebJSResponseCallback responseCallback) {
         NSString *func = [value stringK:@"func"];
-        float time = [value floatK:@"timeinterval"] / 1000;
+        if (!func || [func isEqualToString:@""]) return;
+
+        float time = [value floatK:@"timeinterval"];
+        if (time <= CGFLOAT_MIN) time = 1000.0;
+        time = time / 1000;
         BOOL repeats = [value boolK:@"repeats"];
-        [weaks startTimer:func time:time repeats:repeats];
+        BOOL fire = [value boolK:@"fire"];
+
+        [weaks removeTimer];
+        weaks.timer = [NSTimerMixExtention scheduledTimerWithTimeInterval:time repeats:repeats block:^(NSTimer *timer) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *script = [NSString stringWithFormat:@"if (typeof %@ == \"function\") %@();", func, func];
+                [weaks.webView stringByEvaluatingJavaScriptFromString:script];
+            });
+        }];
+        [[NSRunLoop mainRunLoop] addTimer:weaks.timer forMode:NSRunLoopCommonModes];
+        if (fire) [weaks.timer fire];
     }];
 
     [self.webView registerBridgeHandler:@"removeTimer" handler:^(MixWebValue *value, MixWebJSResponseCallback responseCallback) {
         [weaks removeTimer];
     }];
-}
-
-- (void)startTimer:(NSString *)func time:(float)time repeats:(BOOL)repeats
-{
-    [self removeTimer];
-    __weak typeof(self) weaks = self;
-    self.timer = [NSTimerMixExtention scheduledTimerWithTimeInterval:time repeats:repeats block:^(NSTimer *timer) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *script = [NSString stringWithFormat:@"if(typeof %@ == \"function\") %@();", func, func];
-            [weaks.webView stringByEvaluatingJavaScriptFromString:script];
-        });
-    }];
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)removeTimer

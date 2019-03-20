@@ -285,7 +285,7 @@ value | number | 值
 		console.log(value);
 	});
 
-#### $app.startTimer(funcName, timeinterval, repeats)
+#### $app.startTimer(func, timeinterval, opts)
 
 开启计时器
 
@@ -293,13 +293,19 @@ value | number | 值
 
 参数  | 类型 | 说明
 --- | --- | ---
-funcName | string | 要执行函数的名字
-timeinterval | number | 间隔时间, 毫秒
-repeats | number | 是否重复, 默认true
+func | function | 要执行函数
+timeinterval | number | 间隔时间, 毫秒, 默认1000
+opts.repeats | boolean | 是否重复, 默认true
+opts.fire | boolean | 是否马上执行
 
 **示例:**
 
-	$app.startTimer("window.worker", 2000);
+	$app.startTimer(function() {
+		console.log("hello");
+	}, 2000);
+	$app.startTimer(function() {
+		console.log("hello");
+	}, {timeinterval: 2000, fire: true});
 
 #### $app.removeTimer()
 

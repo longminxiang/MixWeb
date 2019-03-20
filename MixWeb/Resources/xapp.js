@@ -203,19 +203,28 @@ $app.getScreenBrightness = function(cb) {
 
 /**
  * 开启计时器
- * @param {string} funcName - 执行函数名字
- * @param {number} timeinterval - 间隔时间
- * @param {boolean} repeats - 是否重复, 默认true
+ * @param {function} func - 执行函数
+ * @param {number} timeinterval - 间隔时间, 毫秒, 默认1000
+ * @param {Object} opts - 选项
+ * @param {boolean} opts.repeats - 是否重复, 默认true
+ * @param {boolean} opts.fire - 是否马上执行
  */
-$app.startTimer = function(funcName, timeinterval, repeats) {
-    if (typeof repeats == "undefined") repeats = true;
-    $b("startTimer").p({func: funcName, timeinterval: timeinterval, repeats: repeats}).c();
+$app.startTimer = function(func, timeinterval, opts) {
+    if (typeof func != "function") return;
+    if (typeof timeinterval == "object") opts = timeinterval;
+    if (!opts) opts = {};
+    if (typeof opts.repeats == "undefined") opts.repeats = true;
+    if (typeof timeinterval != "object") opts.timeinterval = timeinterval;
+    opts.func = "$app.__timerFunction";
+    $app.__timerFunction = func;
+    $b("startTimer").p(opts).c();
 };
 
 /**
  * 移除计时器
  */
 $app.removeTimer = function() {
+    $app.__timerFunction = undefined;
     $b("removeTimer").c();
 };
 

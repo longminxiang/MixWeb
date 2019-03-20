@@ -183,7 +183,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MixCache_Objc/MixCache_Objc.framework",
 				"${BUILT_PRODUCTS_DIR}/MixDevice/MixDevice.framework",
@@ -206,7 +206,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MixWebDemo/Pods-MixWebDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A503026B6E61C6C05955FCDA /* [CP] Check Pods Manifest.lock */ = {
