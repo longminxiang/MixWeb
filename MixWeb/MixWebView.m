@@ -160,8 +160,12 @@ NSSet* mixWebViewModuleClasses(void) {
 
 - (void)setDelegate:(id<UIWebViewDelegate>)delegate
 {
-    [super setDelegate:self.wjbBridge];
-    [self.wjbBridge setWebViewDelegate:delegate];
+    if ([delegate isKindOfClass:[WebViewJavascriptBridge class]]) {
+        [super setDelegate:delegate];
+    }
+    else {
+        [self.wjbBridge setWebViewDelegate:delegate];
+    }
 }
 
 - (void)registerBridgeHandler:(NSString *)name handler:(MixWebJSHandler)handler

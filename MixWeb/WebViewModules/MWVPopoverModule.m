@@ -21,13 +21,13 @@ MIX_WEBVIEW_MODULE_INIT
 
         CGRect frame = [UIScreen mainScreen].bounds;
         MixWebView *view = [[MixWebView alloc] initWithFrame:frame];
+        view.tag = [MWVPopoverModule tagWithKey:key];
         view.scrollView.bounces = NO;
         view.backgroundColor = [UIColor clearColor];
         view.opaque = NO;
         NSURL *url = [NSURL URLWithString:urlString];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [view loadRequest:request];
-        view.tag = [MWVPopoverModule tagWithKey:key];
         [[UIApplication sharedApplication].delegate.window addSubview:view];
         view.alpha = 0;
         [UIView animateWithDuration:0.25 animations:^{
