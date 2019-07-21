@@ -16,12 +16,13 @@ $app.navigateBack = function(delta) {
  * 导航
  * @param {string} url - url
  */
-$app.navigateTo = function(url) {
+$app.navigateTo = function(url, config) {
     if (url.search("http") == -1) {
-        var baseURL = document.URL.match(/^http.*\/\/.*?\/.*?\//)[0];
+        var baseURL = document.URL.match(/^http.*\/\/.*?\//)[0];
+        var baseURL = document.URL.match(/^http.*\/\/.*?\//)[0];
         url = baseURL + url;
     }
-    $b("navigateTo").p({url: url}).c();
+    $b("navigateTo").p({url: url, config: config}).c();
 };
 
 /**

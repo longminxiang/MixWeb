@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "WebVC.h"
+#import <MixWeb/MWVViewControllerModule.h>
 
 @interface AppDelegate ()
 
@@ -22,47 +23,52 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
 
-    [MixWebView setWhiteList:@[@"163.com", @"3g.163.com", @"localhost"]];
+    [MixWebView setWhiteList:@[@"localhost", @"192.168.0.102", @"amz-1252491566.cos-website.ap-shanghai.myqcloud.com"]];
     
-    UITabBarController *barVC = [UITabBarController new];
-    barVC.tabBar.tintColor = [UIColor orangeColor];
-    barVC.automaticallyAdjustsScrollViewInsets = NO;
+    WebVC *vc = [[WebVC alloc] initWithURLString:@"https://amz-1252491566.cos-website.ap-shanghai.myqcloud.com"];
     
-    NSDictionary *config = @{@"navBar": @{@"barTintColor": @"#6d61ff"},
-                             @"bounces": @(NO),
-                             @"title": @{@"text": @"网易", @"useHtmlTitle": @(NO)},
-                             };
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
     
-    NSDictionary *config1 = @{@"navBar": @{@"barTintColor": @"#FF8000"},
-                              @"title": @{@"text": @"百度"},
-                              };
-
-    MixWebVC *vc = [[WebVC alloc] initWithURLString:@"http://baidu.com"];
-    [vc mergeConfig:config];
-    
-    MixWebVC *vc1 = [[WebVC alloc] initWithURLString:@"http://baidu.com"];
-    [vc1 mergeConfig:config1];
-    
-    MixWebVC *vc2 = [[WebVC alloc] initWithURLString:@"http://hao123.com"];
-    
-    NSArray *titles = @[@"首页", @"通讯录", @"发现", @"我的"];
-    NSArray *vcs = @[[ViewController new], vc, vc1, vc2];
-    NSMutableArray *navs = [NSMutableArray new];
-    for (int i = 0; i < titles.count; i++) {
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcs[i]];
-        nav.automaticallyAdjustsScrollViewInsets = NO;
-        nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i] image:nil tag:i];
-        nav.navigationBar.barTintColor = [UIColor orangeColor];
-        nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
-        nav.navigationBar.barStyle = UIBarStyleBlack;
-        nav.navigationBar.translucent = YES;
-        nav.navigationBar.tintColor = [UIColor whiteColor];
-        [navs addObject:nav];
-    }
-
-    barVC.viewControllers = navs;
-    
-    self.window.rootViewController = barVC;
+//    UITabBarController *barVC = [UITabBarController new];
+//    barVC.tabBar.tintColor = [UIColor orangeColor];
+//    barVC.automaticallyAdjustsScrollViewInsets = NO;
+//
+//    NSDictionary *config = @{@"navBar": @{@"barTintColor": @"#6d61ff"},
+//                             @"bounces": @(NO),
+//                             @"title": @{@"text": @"网易", @"useHtmlTitle": @(NO)},
+//                             };
+//
+//    NSDictionary *config1 = @{@"navBar": @{@"barTintColor": @"#FF8000"},
+//                              @"title": @{@"text": @"百度"},
+//                              };
+//
+//    MixWebVC *vc = [[WebVC alloc] initWithURLString:@"http://baidu.com"];
+//    [vc mergeConfig:config];
+//
+//    MixWebVC *vc1 = [[WebVC alloc] initWithURLString:@"http://baidu.com"];
+//    [vc1 mergeConfig:config1];
+//
+//    MixWebVC *vc2 = [[WebVC alloc] initWithURLString:@"http://hao123.com"];
+//
+//    NSArray *titles = @[@"首页", @"通讯录", @"发现", @"我的"];
+//    NSArray *vcs = @[[ViewController new], vc, vc1, vc2];
+//    NSMutableArray *navs = [NSMutableArray new];
+//    for (int i = 0; i < titles.count; i++) {
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcs[i]];
+//        nav.automaticallyAdjustsScrollViewInsets = NO;
+//        nav.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i] image:nil tag:i];
+//        nav.navigationBar.barTintColor = [UIColor orangeColor];
+//        nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+//        nav.navigationBar.barStyle = UIBarStyleBlack;
+//        nav.navigationBar.translucent = YES;
+//        nav.navigationBar.tintColor = [UIColor whiteColor];
+//        [navs addObject:nav];
+//    }
+//
+//    barVC.viewControllers = navs;
+//
+//    self.window.rootViewController = barVC;
     
     return YES;
 }

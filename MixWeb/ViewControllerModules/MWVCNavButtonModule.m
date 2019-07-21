@@ -70,12 +70,14 @@ MIX_WEB_MODULE_INIT
     UIBarButtonItem *item;
     NSString *title = [config stringK:@"title"];
     NSString *imageName = [config stringK:@"image"];
+    int imageScale = [config intK:@"imageScale"];
+    imageScale = MIN(MAX(imageScale, 2), 3);
 
     //图片
     if (imageName || defaultImage) {
         item = [[UIBarButtonItem alloc] initWithImage:defaultImage style:UIBarButtonItemStylePlain target:self action:@selector(buttonItemsTouched:)];
         __weak typeof(item) witem = item;
-        [MixWebImage getImage:imageName scale:[config intK:@"imageScale"] completion:^(UIImage *image) {
+        [MixWebImage getImage:imageName scale:imageScale completion:^(UIImage *image) {
             if (!image) return ;
             witem.image = [config boolK:@"imageIsOriginal"] ? [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] : image;
         }];

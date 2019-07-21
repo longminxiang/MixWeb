@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
         c.exclude_files = 'MixWeb/MWVImageModule/*.{h,m}'
         c.resource_bundles = {'MixWeb' => 'MixWeb/**/*.{js,png}'}
         c.dependency 'MixExtention', '~> 1.0'
-        c.dependency 'SDWebImage/Core', '~> 4.4.0'
+        c.dependency 'SDWebImage', '~> 5.0.4'
         c.dependency 'WebViewJavascriptBridge', '~> 6.0.3'
         c.dependency 'MBProgressHUD', '0.9.2'
         c.dependency 'MixDevice', '~> 1.0.4'
